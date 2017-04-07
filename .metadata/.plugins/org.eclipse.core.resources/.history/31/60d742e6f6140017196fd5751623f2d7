@@ -1,0 +1,25 @@
+package com.example.a12_spinner;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Spinner;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		// 1. 다량의 데이터
+		// 2. AdapterView 선언 ( ListView, GridView, Gallery, Spinner)
+		// 3. Adapter 새성 후 연결 (setAdapter)
+		
+		String[] str = {"서울시","부산시","인천시","대구시","대전시","광주시","울산시","수원시"};
+		
+		Spinner spin = (Spinner)findViewById(R.id.spinner1);
+		
+	}
+}

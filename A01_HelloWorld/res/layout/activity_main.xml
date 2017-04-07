@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+   android:background="#ff99ff"
+   >
+
+        <!--  컨텐츠와 컨텐츠 간 여백 --><!-- 내부 여백 -->
+    <!-- 
+    	visible : gone(차지하는 자리조차 없어짐), invisible(자리는 유지하되 보이지만 않음), visible(보임)
+     	autoLink : 클릭시 연결화면으로 전환해주는 역할 : web, email, phone ...
+     -->
+    <Button
+        android:layout_marginTop="30dp" 
+        android:paddingLeft="60dp" 
+        
+        android:visibility="visible"
+        
+        android:autoLink="web"
+        android:text="www.naver.com"
+        
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:autoLink="email"
+        android:text="sooingkr@naver.com"
+        
+        android:id="@+id/textView1"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@android:color/holo_blue_light"
+         />
+
+    <TextView
+        android:autoLink="phone"
+        android:text="010-3604-7237"
+        android:gravity="right"
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        
+        android:textColor="@android:color/holo_green_dark"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:autoLink="map"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="215 Russey Ave Parachute, CO 81635"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+     <TextView
+        android:autoLink="all"
+        android:text="Los Angeles, CA 90015"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+
+</LinearLayout>

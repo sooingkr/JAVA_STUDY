@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a01_helloworld"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Practice1"
+            android:label="@string/title_activity_practice1" >
+        </activity>
+        <activity
+            android:name=".LifeCycle"
+            android:label="@string/title_activity_life_cycle" >
+        </activity>
+        <activity
+            android:name=".Event"
+            android:label="@string/title_activity_event" >
+        </activity>
+        <activity
+            android:name=".OtherComponent"
+            android:label="@string/title_activity_other_component" >
+        </activity>
+        <activity
+            android:name=".OtherEvent"
+            android:label="@string/title_activity_other_event" >
+        </activity>
+        <activity
+            android:name=".Game"
+            android:label="@string/title_activity_game" >
+        </activity>
+        <activity
+            android:name=".ToastTest"
+            android:label="@string/title_activity_toast" >
+        </activity>
+        <activity
+            android:name=".Calculation"
+            android:label="@string/title_activity_calculation" >
+        </activity>
+        <activity
+            android:name=".CheckBoxP"
+            android:label="@string/title_activity_check_box_p" >
+        </activity>
+        <activity
+            android:name=".ToggleButtonP"
+            android:label="@string/title_activity_toggle_button_p" >
+        </activity>
+        <activity
+            android:name=".RadioP"
+            android:label="@string/title_activity_radio_p" >
+        </activity>
+        <activity
+            android:name=".ImageViewP"
+            android:label="@string/title_activity_image_view_p" >
+        </activity>
+        <activity
+            android:name=".Album"
+            android:label="@string/title_activity_album" >
+        </activity>
+        <activity
+            android:name=".ImgReadFromPhone"
+            android:label="@string/title_activity_img_read_from_phone" >
+           
+        </activity>
+        <activity
+            android:name=".ResourceString"
+            android:label="@string/title_activity_resource_string" >
+        </activity>
+        <activity
+            android:name=".ImgProcess"
+            android:label="@string/title_activity_img_process" >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

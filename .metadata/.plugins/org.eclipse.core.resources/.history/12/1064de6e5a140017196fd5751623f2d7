@@ -1,0 +1,45 @@
+package com.example.a08_gridview;
+
+import java.io.Serializable;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		// 1. 다량의 데이터
+		// 2. AdaterView 선언
+		// 3. Adapter 생성, 설정 ( 한 셀을 디자인한 layout)
+		
+		PoketMon[] poketmon = {
+				new PoketMon(R.drawable.size1,"size1"),
+				new PoketMon(R.drawable.size2,"size2"),
+				new PoketMon(R.drawable.size3,"size3"),
+				new PoketMon(R.drawable.size4,"size4"),
+				new PoketMon(R.drawable.size5,"size5"),
+				new PoketMon(R.drawable.size6,"size6"),
+		};
+		
+		
+	}
+
+}
+
+class PoketMon implements Serializable{
+	int img;
+	String name = "";
+	
+	public PoketMon(int img, String name) {
+		super();
+		this.img = img;
+		this.name = name;
+	}
+	 
+}

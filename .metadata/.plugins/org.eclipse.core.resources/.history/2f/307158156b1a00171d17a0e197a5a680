@@ -1,0 +1,10 @@
+package Article;
+
+public class ListArticleService {
+
+	ArticleDAO dao = new ArticleDAO();
+	
+	public ArticlePage getArticlePage( int pageNum ) {
+		
+	}
+}

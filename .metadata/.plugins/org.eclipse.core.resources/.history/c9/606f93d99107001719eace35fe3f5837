@@ -1,0 +1,27 @@
+/**
+ * 		[	CheckBox	 ] : 여러개 선택 가능
+ * 
+ * 				vs
+ * 
+ * 		[ RadioButton ] : 하나만 선택 가능
+ * 
+ * 			=> 자바는 CheckBox에서 RadioButton 기능까지 같이 제공한다.
+ * 
+ */
+package _18_Swing;
+
+import java.awt.Frame;
+
+public class _13_CheckBox {
+
+	public static void main(String[] args) {
+		
+		Frame f = new Frame("Checkbox 활용");
+		f.setBounds(500,100,300,400);
+		f.setLayout(null);
+		
+		
+		f.setVisible(true);
+	} // end of main
+
+} // end of class

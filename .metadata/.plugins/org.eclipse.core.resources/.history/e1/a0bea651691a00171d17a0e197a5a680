@@ -1,0 +1,67 @@
+package Article;
+
+import java.util.ArrayList;
+
+public class ArticlePage {
+	private int total; // 전체 게시글 수
+	private int currentPage; // 현재 페이지 번호
+	private int totalPage; // 전체 페이지 수
+	private int startPageIndex; // 게시판 아래에 표시할 시작 startPageIndex
+	private int endPageIndex; 
+	private ArrayList<ArticleDTO> content; // 표시해줄 게시글
+	
+	
+	public ArticlePage(int total, int currentPage, ArrayList<ArticleDTO> content) {
+		super();
+		this.total = total;
+		this.currentPage = currentPage;
+		this.totalPage = totalPage;
+		this.startPageIndex = startPageIndex;
+		this.endPageIndex = endPageIndex;
+		this.content = content;
+	}
+	
+	public ArticlePage() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public int getTotal() {
+		return total;
+	}
+	public int getCurrentPage() {
+		return currentPage;
+	}
+	public int getTotalPage() {
+		return totalPage;
+	}
+	public int getStartPageIndex() {
+		return startPageIndex;
+	}
+	public int getEndPageIndex() {
+		return endPageIndex;
+	}
+	public ArrayList<ArticleDTO> getContent() {
+		return content;
+	}
+	public void setTotal(int total) {
+		this.total = total;
+	}
+	public void setCurrentPage(int currentPage) {
+		this.currentPage = currentPage;
+	}
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
+	}
+	public void setStartPageIndex(int startPageIndex) {
+		this.startPageIndex = startPageIndex;
+	}
+	public void setEndPageIndex(int endPageIndex) {
+		this.endPageIndex = endPageIndex;
+	}
+	public void setContent(ArrayList<ArticleDTO> content) {
+		this.content = content;
+	}
+	
+	
+	
+}

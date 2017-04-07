@@ -1,0 +1,86 @@
+package com.example.a09_kakaotalk;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+	public static int[] imgs = { R.drawable.choihyeonsik, R.drawable.daeheejeong, R.drawable.deokhwan, R.drawable.hanhyeyeon,
+			R.drawable.jaewoopark, R.drawable.jeongdarin, R.drawable.jeongjaehwan, R.drawable.jeongjinkeun,
+			R.drawable.jiyunsik, R.drawable.joboram, R.drawable.junghongui, R.drawable.jungyuno,
+			R.drawable.kangseungwon, R.drawable.kimjaehyun, R.drawable.kimjihyea, R.drawable.kimjihyebb,
+			R.drawable.kimyongrea,  R.drawable.leedaehyoung, R.drawable.leeyoonji,
+			R.drawable.leeyoungmin, R.drawable.minju, R.drawable.minsseam, R.drawable.sangsuban, R.drawable.seoheyunwoo,
+			R.drawable.seongyoon, R.drawable.yoonjuhee, R.drawable.younggwan };
+	public static String[] contents = {
+			"지각 0", "지각 1", "지각 10", "지각 6", "지각 0", "지각 5", "지각 5", "지각 0", "지각 0", "지각 0", "지각 1", "지각 1",
+			"지각 2", "지각 1", "지각 5", "지각 0", "지각 6", "지각 2", "지각 1", "지각 0", "지각2", "지각 0", "지각 0", "지각 2",
+			"지각 6", "지각 5", "지각0"
+	};
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		ListView lv = (ListView)findViewById(R.id.listView1);
+		MyAdapter adapter = new MyAdapter(getApplicationContext(), imgs, contents);
+		
+		lv.setAdapter(adapter);
+		
+		
+		
+	} // end of onCreate
+} // end of class
+
+class MyAdapter extends BaseAdapter {
+	int[] imgs;
+	String[] contents;
+	LayoutInflater lf;
+	
+	
+	public MyAdapter(Context context, int[] imgs2, String[] contents) {
+		this.imgs = imgs2;
+		this.contents = contents;
+		lf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	}
+
+	@Override
+	public int getCount() {
+		return imgs.length;
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return imgs[position];
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		if ( convertView == null ) {
+			convertView = lf.inflate(R.layout.mylayout, null);
+		}
+		
+		TextView name = (TextView)convertView.findViewById(R.id.name);
+		TextView content = (TextView)convertView.findViewById(R.id.content);
+		ImageView img = (ImageView)convertView.findViewById(R.id.imageView1);
+		img.setImageResource(imgs[position]);
+		String name2 = imgs[position] + "";
+		name2 = name2.substring(10);
+		name.setText(name2);
+		content.setText(contents[position]);
+		return convertView;
+	}
+
+}

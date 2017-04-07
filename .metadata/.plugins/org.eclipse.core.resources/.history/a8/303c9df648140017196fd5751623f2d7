@@ -1,0 +1,90 @@
+package com.example.a07_adapterview;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+	LayoutInflater lif;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	
+		Item[] item = {
+				new Item("사과","apple"),
+				new Item("배","pear"),
+				new Item("수박","watermelon"),
+				new Item("딸기","strawberry"),
+				new Item("포도","grape"),
+				new Item("자몽","grapefruit"),
+				new Item("바나나","banana"),
+				new Item("호박","pumpkin"),
+				new Item("오이","cucumber"),	
+		};
+		
+		
+		lif = (LayoutInflater) getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+		MyAdapter adapter = new MyAdapter(lif, item);
+	}
+
+	
+}
+
+class Item {
+	String name;
+	String word;
+	
+	public Item(String name, String word) {
+		super();
+		this.name = name;
+		this.word = word;
+	}
+	
+}
+
+class MyAdapter extends BaseAdapter {
+	LayoutInflater lif;
+	Item[] item;
+	public MyAdapter(LayoutInflater lif, Item[] item) {
+		this.lif = lif;
+		this.item = item;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return item.length;
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return item[position];
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		if ( convertView == null ) {
+			convertView = lif.inflate(R.layout.mylayout, parent);
+		}
+		TextView tv1 = (TextView)convertView.findViewById(R.id.textView1);
+		TextView tv2 = (TextView)convertView.findViewById(R.id.textView2);
+		tv1.setText(item[position].name);
+		tv2.setText(item[position].word);
+		return convertView;
+	}
+	
+}

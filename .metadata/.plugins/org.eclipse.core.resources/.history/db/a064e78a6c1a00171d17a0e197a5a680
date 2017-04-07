@@ -1,0 +1,5 @@
+/join.do=joinService.JoinHandler
+/login.do=loginService.LoginHandler
+/logout.do=logoutService.LogoutHandler
+/changePwd.do=changePassword.ChangePasswordHandler
+/write.do=Article.ArticleHandler

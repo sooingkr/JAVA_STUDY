@@ -1,0 +1,41 @@
+package com.example.a07_adapterview;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	
+		Item[] item = {
+				new Item("사과","apple"),
+				new Item("배","pear"),
+				new Item("수박","watermelon"),
+				new Item("딸기","strawberry"),
+				new Item("포도","grape"),
+				new Item("자몽","grapefruit"),
+				new Item("바나나","banana"),
+				new Item("호박","pumpkin"),
+				new Item("오이","cucumber"),	
+		};
+	}
+
+	
+}
+
+class Item {
+	String name;
+	String word;
+	
+	public Item(String name, String word) {
+		super();
+		this.name = name;
+		this.word = word;
+	}
+	
+}

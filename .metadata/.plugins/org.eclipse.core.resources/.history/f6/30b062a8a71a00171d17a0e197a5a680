@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+                                -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+<!-- DBCP 설정(DataBase Connection Pool) 
+	resource name은 코드상에서 쓰게 될 이름을 지정하는 것
+-->
+	
+	<Resource
+        name="jdbc/onlinesrv"
+        auth="Container"
+        type="javax.sql.DataSource"
+        factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://localhost:3306/jsptest"
+        username="root"
+        password="dudfhd13"
+        maxActive="20"
+        maxIdle="10"
+        initialSize="10"
+        connectionPoolName="batchsrv_pool"
+        maxWait="-1"/>
+</Context>

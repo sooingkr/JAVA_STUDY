@@ -1,0 +1,18 @@
+/**
+ * 		[	CheckBox	 ] : 여러개 선택 가능
+ * 
+ * 				vs
+ * 
+ * 		[ RadioButton ] : 하나만 선택 가능
+ * 
+ */
+package _18_Swing;
+
+public class _13_CheckBox {
+
+	public static void main(String[] args) {
+		
+		
+	} // end of main
+
+} // end of class

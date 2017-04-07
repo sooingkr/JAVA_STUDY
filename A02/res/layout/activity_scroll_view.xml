@@ -1,0 +1,87 @@
+
+<!--
+    	ScrollView : 세로 스크롤
+    	HorizontalScrollView  가로 스크롤 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" 
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘은 전국이 흐린하늘 보이는 가운데 곳곳에 촉촉한 봄비가 내리겠습니다.
+
+내리는 양은 강원도에 5에서 10mm 그밖의 지방에는 5mm안팎으로 그리 많지는 않겠는데요,
+
+다만 천둥 번개가 치는 곳도 있겠습니다.
+
+기온이 낮은 강원산간지방은 비가 눈으로 바뀌어 내리는 곳도 있겠습니다.
+
+내리는 비의 양이 적은데다가 대기가 정체되면서 수도권과 충북지방은 미세먼지 농도가 다소 높게 나타나겠는데요,
+
+호흡기 약하신 분들은 주의하셔야겠습니다.
+
+오늘은 예년기온을 밑돌면서 조금 쌀쌀하겠지만 내일부터는 다시 기온이 오르겠습니다.
+
+특히 모레는 낮기온 15도까지 오르면서 비교적 포근한 봄날씨가 예상됩니다.
+
+현재 위성영상 보시면 비구름이 점차 만들어지면서 곳곳에 비가 내리고 있습니다.
+
+오늘은 전국이 흐린가운데 비나 눈이 내리겠습니다.
+
+오늘 한낮기온은 서울이 10도 대구 13도로 어제보다 낮겠습니다.
+
+바다의 물결은 남해 먼바다에서 높게 일겠습니다.
+
+지금까지 기상정보였습니다.
+
+KBS" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+</LinearLayout>

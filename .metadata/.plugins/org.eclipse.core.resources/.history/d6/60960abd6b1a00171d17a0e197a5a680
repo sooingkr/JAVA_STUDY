@@ -1,0 +1,13 @@
+package Article;
+
+public class ListArticleService {
+
+	ArticleDAO dao = new ArticleDAO();
+	final int size = 5;
+	
+	public ArticlePage getArticlePage( int pageNum ) {
+		int total = dao.selectCount();
+		dao.select((pageNum-1)*size, size); // startRow, size
+		
+	}
+}

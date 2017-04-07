@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="RealName">안녕하세요.</string>
+    <string name="app_name">A01_HelloWorld</string>
+    <string name="hello_world">변경</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_practice1">Practice1</string>
+    <string name="title_activity_life_cycle">LifeCycle</string>
+    <string name="title_activity_event">Event</string>
+    <string name="title_activity_other_component">OtherComponent</string>
+    <string name="title_activity_other_event">OtherEvent</string>
+    <string name="title_activity_game">Game</string>
+    <string name="title_activity_toast">Toast</string>
+    <string name="title_activity_calculation">Calculation</string>
+    <string name="title_activity_check_box_p">CheckBoxP</string>
+    <string name="title_activity_toggle_button_p">ToggleButtonP</string>
+    <string name="title_activity_radio_p">RadioP</string>
+    <string name="title_activity_image_view_p">ImageViewP</string>
+    <string name="title_activity_album">Album</string>
+    <string name="title_activity_img_read_from_phone">ImgReadFromPhone</string>
+    <string name="title_activity_resource_string">ResourceString</string>
+    <string name="title_activity_img_process">ImgProcess</string>
+
+</resources>

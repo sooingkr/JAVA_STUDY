@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a03"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".Move"
+            android:label="@string/title_activity_move" >
+        </activity>
+        <activity
+            android:name=".IntentStudy"
+            android:label="@string/title_activity_intent_study" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NextPage"
+            android:label="@string/title_activity_next_page" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Intent2"
+            android:label="@string/title_activity_intent2" >
+        </activity>
+        <activity
+            android:name=".Intent3"
+            android:label="@string/title_activity_intent3" >
+        </activity>
+        <activity
+            android:name=".JoinNext"
+            android:label="@string/title_activity_join_next" >
+        </activity>
+    </application>
+
+</manifest>

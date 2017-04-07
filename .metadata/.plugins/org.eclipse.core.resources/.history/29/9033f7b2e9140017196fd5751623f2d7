@@ -1,0 +1,33 @@
+package com.example.a10_gallery;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Gallery;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		// 1. 다량의 데이터
+		// 2. AdapterView 선언 ( ListView, GridView, Gallery, Spinner )
+		// 3. Adapter 객체 생성, 연결(setAdapter())
+		final int[] imgs = { R.drawable.choihyeonsik, R.drawable.daeheejeong, R.drawable.deokhwan,
+				R.drawable.hanhyeyeon, R.drawable.jaewoopark, R.drawable.jeongdarin, R.drawable.jeongjaehwan,
+				R.drawable.jeongjinkeun, R.drawable.jiyunsik, R.drawable.joboram, R.drawable.junghongui,
+				R.drawable.jungyuno, R.drawable.kangseungwon, R.drawable.kimjaehyun, R.drawable.kimjihyea,
+				R.drawable.kimjihyebb, R.drawable.kimyongrea, R.drawable.leedaehyoung, R.drawable.leeyoonji,
+				R.drawable.leeyoungmin, R.drawable.minju, R.drawable.minsseam, R.drawable.sangsuban,
+				R.drawable.seoheyunwoo, R.drawable.seongyoon, R.drawable.yoonjuhee, R.drawable.younggwan };
+		
+		Gallery gal = (Gallery)findViewById(R.id.gallery1);
+		
+		MyAdapter adapter = new MyAdapter(
+																getApplicationContext(), R.layout.cell, imgs
+																);
+		gal.setAdapter(adapter);
+		
+	}
+}

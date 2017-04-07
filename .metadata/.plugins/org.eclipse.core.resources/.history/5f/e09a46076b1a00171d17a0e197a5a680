@@ -1,0 +1,8 @@
+package Article;
+
+public class ListArticleService {
+
+	public ArticlePage getArticlePage( int pageNum ) {
+		
+	}
+}

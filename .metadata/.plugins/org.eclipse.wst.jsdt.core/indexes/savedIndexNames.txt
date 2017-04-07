@@ -1,0 +1,12 @@
+INDEX VERSION 1.3+C:\DEV\Workspace_HYR\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+517213955.index
+1902412713.index
+4107545774.index
+3391626147.index
+4216661150.index
+2897018182.index
+2517010656.index
+3126961213.index
+1324909030.index
+528846116.index
+3481125187.index

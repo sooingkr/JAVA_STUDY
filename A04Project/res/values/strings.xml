@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">A04Project</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_next">Next</string>
+    <string name="title_activity_media_player_main">MediaPlayerMain</string>
+    <string name="title_activity_media_player2">MediaPlayer2</string>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 
+    	포토샵에서 레이아웃과 비슷함 쌓이는 식임 setvisible로 자바에서 제어하면서 출력할 때 용이함
+     -->
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:background="#ff0f0f"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:background="#f00fff"
+        android:layout_width="271dp"
+        android:layout_height="69dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:background="#fff0f0"
+        android:layout_width="114dp"
+        android:layout_height="116dp"
+        android:text="Button" />
+
+</FrameLayout>

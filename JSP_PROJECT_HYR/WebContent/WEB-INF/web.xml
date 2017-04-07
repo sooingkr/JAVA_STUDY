@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>JSP_PROJECT_HYR</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <description>로그인값</description>
+    <param-name>loginEnabled</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  <context-param>
+    <description>에러</description>
+    <param-name>errorValue</param-name>
+    <param-value>error값</param-value>
+  </context-param>
+  <context-param>
+    <description>파일경로</description>
+    <param-name>fp</param-name>
+    <param-value>/resourceFile/applicationTestFile.txt</param-value>
+  </context-param>
+  
+  <filter>
+  	<filter-name>MyFilter</filter-name>
+  	<filter-class>_52_FilterPackage.MyFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>MyFilter</filter-name>
+  	<url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-class>_51_MVC_Pattern_Package.ControllerServlet</servlet-class>
+    <init-param>
+      <param-name>configFile</param-name>
+      <param-value>C:\DEV\Workspace_HYR\JSP_PROJECT_HYR\src\_51_MVC_Pattern_Package\config.properties</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerServlet</servlet-name>
+    <url-pattern>/ControllerServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>LoginServletName</servlet-name>
+    <servlet-class>_52_FilterPackage.loginServletTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServletName</servlet-name>
+    <url-pattern>/loginServletTest.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>mainName</servlet-name>
+  	<servlet-class>_52_FilterPackage.Main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>mainName</servlet-name>
+  	<url-pattern>/Main.do</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;A04Project/res/raw/do-octave.wav&apos; to &apos;ddd.wav&apos;" description="Rename resource &apos;do-octave.wav&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/raw/do-octave.wav" name="ddd.wav" stamp="1490689313047" updateReferences="true"/>
+</session>

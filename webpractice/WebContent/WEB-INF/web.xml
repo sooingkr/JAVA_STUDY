@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>webpractice</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<context-param>
+		<description>설명 초기화 변수</description>
+		<param-name>InitParam</param-name>
+		<param-value>InitParamValue</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>Controller</servlet-name>
+		<servlet-class>MVC.Controller</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BookListProcess</servlet-name>
+		<servlet-class>MVC.BookListProcess</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookListProcess</servlet-name>
+		<url-pattern>/BookListProcess</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BookWriteForm</servlet-name>
+		<servlet-class>MVC.BookWriteForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookWriteForm</servlet-name>
+		<url-pattern>/BookWriteForm</url-pattern>
+	</servlet-mapping>
+
+</web-app>

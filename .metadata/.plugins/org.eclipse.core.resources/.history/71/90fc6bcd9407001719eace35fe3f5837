@@ -1,0 +1,71 @@
+/**
+ * 		[	CheckBox	 ] : 여러개 선택 가능
+ * 
+ * 				vs
+ * 
+ * 		[ RadioButton ] : 하나만 선택 가능
+ * 
+ * 			=> 자바는 CheckBox에서 RadioButton 기능까지 같이 제공한다.
+ * 
+ */
+package _18_Swing;
+
+import java.awt.Checkbox;
+import java.awt.CheckboxGroup;
+import java.awt.Frame;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
+
+public class _13_CheckBox {
+
+	public static void main(String[] args) {
+		
+		final Frame f = new Frame("Checkbox 활용");
+		f.setBounds(500,100,800,800);
+		f.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				e.getWindow().dispose();
+			}
+		});
+		f.setLayout(null);
+		////////////////////////////////////////////////////
+		// CheckBox Ex
+		Checkbox cb = new Checkbox("사과",true); // true/false : 기본 체크 상태 지정(default : false)
+		Checkbox cb2 = new Checkbox("딸기",false);
+		Checkbox cb3 = new Checkbox("수박",true);
+		cb.setBounds(50, 50, 100, 100);
+		cb2.setBounds(50, 150, 100, 100);
+		cb3.setBounds(50, 250, 100, 100);
+		f.add(cb);
+		f.add(cb2);
+		f.add(cb3);
+		
+		System.out.println(cb.getLabel()); // 라벨(문자열) 읽어오기
+		System.out.println(cb.getState()); // 체크된 상태인지 읽어오기
+		
+		/////////////////////////////////////////////////////
+		// [ 단일 선택만 가능하도록 : RadioButton 처럼... ]
+		CheckboxGroup cg = new CheckboxGroup();
+		Checkbox cb4 = new Checkbox("해운대",cg,true); // 생성자에서 그룹을 지정해 줌
+		Checkbox cb5 = new Checkbox("겨울왕국",cg,false); // 생성자에서 그룹을 지정해 줌
+		Checkbox cb6 = new Checkbox("뽀로로",cg,true); // 생성자에서 그룹을 지정해 줌
+		cb4.setBounds(50,250,100,100);
+		cb4.setBounds(50,350,100,100);
+		cb4.setBounds(50,450,100,100);
+		f.add(cb4);
+		f.add(cb5);
+		f.add(cb6);
+		
+		
+		////////////////////////////////////////////////////
+		
+		f.setVisible(true);
+		
+	} // end of main
+
+} // end of class
